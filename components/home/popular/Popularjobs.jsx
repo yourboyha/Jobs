@@ -30,9 +30,9 @@ const Popularjobs = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Popular jobs</Text>
+        <Text style={styles.headerTitle}>ตำแหน่งงานแนะนำ</Text>
         <TouchableOpacity>
-          <Text style={styles.headerBtn}>Show all</Text>
+          <Text style={styles.headerBtn}>แสดงทั้งหมด</Text>
         </TouchableOpacity>
       </View>
 
@@ -40,7 +40,7 @@ const Popularjobs = () => {
         {isLoading ? (
           <ActivityIndicator size='large' color={COLORS.primary} />
         ) : error ? (
-          <Text>Something went wrong</Text>
+          <Text>มีบางผิดอย่างผิดพลาดที่ส่วนงานแนะนำ</Text>
         ) : (
           <FlatList
             data={data}

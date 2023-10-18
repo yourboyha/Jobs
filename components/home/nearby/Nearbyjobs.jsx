@@ -17,9 +17,9 @@ const Nearbyjobs = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Nearby jobs</Text>
+        <Text style={styles.headerTitle}>ตำแหน่งงานใกล้คุณ</Text>
         <TouchableOpacity>
-          <Text style={styles.headerBtn}>Show all</Text>
+          <Text style={styles.headerBtn}>แสดงทั้งหมด</Text>
         </TouchableOpacity>
       </View>
 
@@ -27,7 +27,7 @@ const Nearbyjobs = () => {
         {isLoading ? (
           <ActivityIndicator size='large' color={COLORS.primary} />
         ) : error ? (
-          <Text>Something went wrong</Text>
+          <Text>มีบางผิดอย่างผิดพลาดที่ส่วนงานใกล้เคียง</Text>
         ) : (
           data?.map((job) => (
             <NearbyJobCard
